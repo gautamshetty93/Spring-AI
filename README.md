@@ -56,4 +56,28 @@ Prompt Stuffing=Giving the LLM an open book before answering a question.
 - LLM uses this extra content to answer the question accurately.
 - This technique is known as in-context learning or retrieval-augmented prompting.
 
+### Advisors
+Advisors are interceptors or middleware for the prompt flow
+They allow to:
+- Pre or post process the prompt data.
+- Add custom login or auditing
+- Inject additional behaviour without modifying core logic
+- Chain multiple behaviours cleanly.
+
+User -> ChatClinet -> [Advisors] -> LLM -> Response -> [Advisors] -> User
+
+### Understanding ChatOptions in SpringAI :
+It is a configuration in SpringAI that allows you to customize how a language model behaves during chat/completion calls. Think of it like tuning panel for your AI model - Limit can be set, adjust creativity, randomness, verbosity, control response length abd more.
+| Option           | Meaning                                                                 |
+|-----------------|-------------------------------------------------------------------------|
+| model           | Which LLM model to use (e.g., gpt-4, gpt-3.5-turbo, etc.)               |
+| frequencyPenalty| Reduces repetition. Higher = less repetition                            |
+| presencePenalty | Encourages mentioning new topics                                        |
+| temperature     | Controls creativity. 0 = focused, 1 = random                            |
+| topP            | Controls randomness (nucleus sampling)                                  |
+| stopSequences   | Stop generating when specific phrases are found                         |
+| maxTokens       | Maximum number of tokens (words/chars) in the reply                     |
+| topK            | Controls how many top choices are considered                            |
+
+
 

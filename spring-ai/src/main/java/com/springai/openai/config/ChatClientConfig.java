@@ -1,6 +1,8 @@
 package com.springai.openai.config;
 
+import com.springai.openai.advisors.TokenUsageAuditAdvisor;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,7 +11,9 @@ public class ChatClientConfig {
 
     @Bean
     public ChatClient chatClient(ChatClient.Builder chatClientBuilder) {
-        return chatClientBuilder.defaultSystem(
+        return chatClientBuilder
+                .defaultAdvisors(new TokenUsageAuditAdvisor())
+                .defaultSystem(
                 """
                                 You are an internal HR assistant for a company. You will be asked questions about the company's policies,\s
                                  benefits, and other HR-related topics. Provide accurate and helpful information to employees based on\s
