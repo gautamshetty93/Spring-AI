@@ -85,5 +85,26 @@ LLMs typically return plain text responses. But we often need JSON, XML or Java 
 These converters add formatting instruction to guide the model, ensures it replies in parseable format.
 Also convers raw text into java objects or custom classes.
 
+## Generative AI(GenAI)
+Generative AI refers to a class of artificial intelligence models that can generate new content, such as text, images, audio, or even code. These models learn patterns from large datasets and can create original outputs based on that learning.
 
+### Generative AI Family tree :
+It is part of bigger family of techniques in AI, including:
+- Artificial Intelligence : Making computers perform tasks that typically require human intelligence. AI is umbrella term for smart machines that can perform tasks like learning, reasoning, problem-solving, and understanding natural language.
+- Machine Learning : Smaller part of AI that teach computer by giving examples. It allows machines to learn from data and improve performance over time without being explicitly programmed. It does not implement strict rules. Computer determines the patterns by its own.
+- Deep Learning : Subset of machine learning that uses neural networks with many layers (hence "deep"). It is particularly effective for tasks like image recognition, natural language processing, and generative AI. Deep learning models can automatically learn features from raw data, making them powerful for complex tasks.
+- Neural networks : A type of machine learning model inspired by the structure of the human brain. Neural networks consist of layers of interconnected nodes (neurons) that process and transmit information. They are the foundation for deep learning models and are used in various applications, including generative AI.
+- NLP(Natural Language Processing) : A field of AI that focuses on the interaction between computers and human language. NLP enables machines to understand, interpret, and generate human language in a valuable way. It is a key component of generative AI models that work with text.
+- Generative AI : A specific type of AI that focuses on creating new content. Generative AI models can produce text, images, audio, and more. They are trained on large datasets and can generate original outputs based on the patterns they have learned. Examples include GPT-3 for text generation and DALL-E for image generation.
+- LLMs(Large Language Models) : A type of generative AI model that is specifically designed for natural language processing tasks. LLMs are trained on vast amounts of text data and can generate human-like text based on the input they receive. They are used for tasks such as chatbots, content creation, and language translation.
 
+### Types of Generative AI models :
+LLMs(text generation) and Diffusion(image, audio, video) models are two popular types of generative AI models, each with its own strengths and applications.
+
+LLMs have one main job of guessing the next word based on input provided. Using LLM wrappers like ChatGPT we get full sentences.
+Process of breaking the original text into token is called tokenization. A token can be character or word or part of word depending on the model.
+
+Text -> Tokens -> Token Id -> Vectors.
+
+Embeddings are numerical representations of text that capture semantic meaning. They are used to compare and understand the relationships between different pieces of text. For example, the words "king" and "queen" would have similar embeddings because they are related in meaning.
+This is the way of teaching the model to understand the meaning of words and sentences, which is crucial for generating coherent and contextually relevant text.
