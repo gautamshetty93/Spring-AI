@@ -79,5 +79,11 @@ It is a configuration in SpringAI that allows you to customize how a language mo
 | maxTokens       | Maximum number of tokens (words/chars) in the reply                     |
 | topK            | Controls how many top choices are considered                            |
 
+### Structured output converter in SpringAI :
+LLMs typically return plain text responses. But we often need JSON, XML or Java POJOs, because structured data is easier to parse, use and integrate in applications.
+
+These converters add formatting instruction to guide the model, ensures it replies in parseable format.
+Also convers raw text into java objects or custom classes.
+
 
 
