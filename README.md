@@ -108,3 +108,7 @@ Text -> Tokens -> Token Id -> Vectors.
 
 Embeddings are numerical representations of text that capture semantic meaning. They are used to compare and understand the relationships between different pieces of text. For example, the words "king" and "queen" would have similar embeddings because they are related in meaning.
 This is the way of teaching the model to understand the meaning of words and sentences, which is crucial for generating coherent and contextually relevant text.
+
+## Cgat memory using Spring AI
+Chat memory is a technique used in conversational AI to maintain context across multiple interactions with a user. It allows the AI model to remember previous messages, user preferences, and other relevant information to provide more coherent and personalized responses.
+In Spring AI, chat memory can be implemented using the `ChatMemory` interface, which provides methods for storing and retrieving conversation history. This allows the model to reference past interactions and maintain a more natural and engaging conversation with the user.
